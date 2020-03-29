@@ -1,0 +1,201 @@
+/*  style sheet for the  corona  dash board */
+
+
+/*  loader for the projects */
+
+.loader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% + 100px);
+    z-index: 10;
+    background-color: #e9ebee81;
+    display: none;
+    overflow: hidden;
+}
+
+.loader-body {
+    position: relative;
+    top: 40%;
+    left: 45%;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top: 5px solid #29487d;
+    border-left: 5px solid #29487d;
+    border-bottom: 5px solid #29487d;
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+    /* Safari */
+}
+
+
+/* Safari */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background-color: #e9ebee !important;
+}
+
+
+/*  nav abs and component */
+
+nav {
+    box-shadow: 0 1px 5px rgba(27, 31, 35, 0.15) !important;
+    position: fixed;
+    background-color: #29487d !important;
+    color: #e9ebee;
+}
+
+.navbar-collapse {
+    float: right;
+}
+
+nav a {
+    color: #e9ebee !important;
+}
+
+.un {
+    color: #e9ebee !important;
+    display: inline-block;
+}
+
+.un:after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: #e9ebee;
+    transition: 300ms;
+    transform-origin: 0% 50%;
+}
+
+.un:hover:after {
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-collapse {
+        float: none;
+    }
+}
+
+nav .container,
+footer .container,
+section .container {
+    max-width: 720px;
+}
+
+
+/* main body of the file */
+
+.Box {
+    margin-bottom: 15px;
+}
+
+.box-shadow-medium {
+    box-shadow: 0 1px 5px rgba(27, 31, 35, 0.15) !important;
+    background-color: #ffffff !important;
+    font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important;
+}
+
+.v-align-top {
+    vertical-align: top;
+}
+
+#content_table {
+    width: 100%;
+}
+
+#content_table,
+#content_table thead td {
+    border-bottom: none !important;
+}
+
+#content_table tr {
+    background-color: transparent;
+}
+
+#content_table td {
+    padding: 0px;
+}
+
+.image-preview {
+    max-width: 100%;
+}
+
+#content_table_info {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .Box .d-table-cell {
+        display: block !important;
+        padding: 10px !important;
+        max-width: 100% !important;
+        flex: unset;
+    }
+}
+
+.paging_simple_numbers {
+    font-size: 12px;
+}
+
+.row {
+    margin: 0px !important;
+}
+
+
+/* footer  style  */
+
+footer {
+    padding: 30px 0px;
+    background-color: #ffff;
+}
+
+
+/*  footer i cons */
+
+.social-media-list {
+    text-align: center;
+}
+
+.fa {
+    padding: 15px;
+    font-size: 20px !important;
+    background-color: #818793 !important;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 5px;
+    color: #e9ebee;
+}
+
+.fa:hover {
+    background-color: #5e6168 !important;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/* #103c5b */
