@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <!-- data table plugins -->
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+    <!--  font -awesome  for  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-body"></div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand " href="index.html">COVID-19 Dashboards</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="container">
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link un" href="about.html">About <span
+                                        class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link un" href="contact-us.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link un" href="quiz.html">quiz</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-body">
+        <section>
+            <div class="container p-4 bg-white">
+                <div class="row">
+                    <div class="col-12 p-0 pt-3 pb-4 ">
+                        <h3>Covid 19 Quiz</h3>
+                    </div>
+                </div>
+                <!-- start que -->
+                <div class="row quiz">
+
+                </div>
+                <!--  ens question -->
+
+                <div class="score row ">
+
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center pt-5">
+                        <button class="btn btn-primary submit-form">
+                                Submit
+                            </button>
+                        <button class="btn btn-light reset-form" style="background-color: lightgray;">
+                                Reset
+                            </button>
+                    </div>
+                </div>
+
+
+        </section>
+        </div>
+
+
+        <footer>
+            <div class="container">
+                <div class="social-media-list">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <!-- <a href="#" class="fa fa-google"></a> -->
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            <div class="text-center pb-2">
+                <small> COVID-19 Dashboards template | © 2020 All rights reserved </small>
+            </div>
+
+        </footer>
+
+        <script>
+            $(document).ready(function() {
+
+                que_arr = [{
+                    // formate of thr question and ans 
+                    question: " first question ?",
+                    answer: "your option 1",
+                    options: {
+                        //   you can change the right side of the data only ie Your option
+                        'options-1': "your option 1",
+                        'options-2': "your option 2",
+                        'options-3': "your option 3",
+                        'options-4': "your option 4",
+                    }
+                }, {
+                    // formate of thr question and ans 
+                    question: " first question ?",
+                    answer: "your option 2",
+                    options: {
+                        //   you can change the right side of the data only ie Your option
+                        'options-1': "your option 1",
+                        'options-2': "your option 2",
+                        'options-3': "your option 3",
+                        'options-4': "your option 4",
+                    }
+                },
+{
+                    // formate of thr question and ans 
+                    question: " third question ?",
+                    answer: "your option 2",
+                    options: {
+                        //   you can change the right side of the data only ie Your option
+                        'options-1': "your option 1",
+                        'options-2': "your option 2",
+                        'options-3': "your option 3",
+                        'options-4': "your option 4",
+                    }
+                }, ]
+                $(function() {
+                    $('.loader').show();
+                    setTimeout(function() {
+                        $('.loader').hide();
+                    }, 1500);
+                });
+
+                $(".submit-form").click(function() {
+                    let right = 0;
+                    let wrong = 0;
+                    let no_ans = 0;
+                    for (j = 0; j < que_arr.length; j++) {
+                        i = j + 1;
+                        let ans = $("input:radio[name=que" + i + "]:checked").val();
+                        if ((ans == undefined) || (ans == null) || (ans == "")) {
+                            no_ans++;
+                            $(".ans-" + i).addClass("bg-light");
+                        } else {
+                            if (ans == que_arr[j].answer) {
+                                right++;
+                                $(".ans-" + i).addClass("bg-right");
+                            } else {
+                                wrong++;
+                                $(".ans-" + i).addClass("bg-wrong");
+                            }
+                        }
+                        $(".ans-" + i).text("Answer: " + que_arr[j].answer)
+
+                    }
+                    $(".score").html("");
+                    $(".score").show();
+                    s = `
+                    <div class="col-3">
+                        Score :${right}/${right + wrong + no_ans}
+                    </div>
+                    <div class="col-3">
+                        Correct : ${right}
+                    </div>
+                    <div class="col-3">
+                        Wrong : ${wrong}
+                    </div>
+                    <div class="col-3">
+                        Not attempt :${no_ans}
+                    </div>
+                    
+                    `;
+                    $(".score").append(s);
+
+
+                });
+
+                $(".reset-form").click(function() {
+                    $("input:radio").prop("checked", false);
+                    $(".ans").removeClass("bg-right");
+                    $(".ans").removeClass("bg-wrong");;
+                    $(".ans").removeClass("bg-light");;
+                    $(".ans").text("");
+                    $(".score").hide();
+
+                });
+
+
+
+
+
+                for (j = 0; j < que_arr.length; j++) {
+                    num = j + 1;
+                    let que = que_arr[j].question;
+                    let option1 = que_arr[j].options["options-1"];
+                    let option2 = que_arr[j].options["options-2"];
+                    let option3 = que_arr[j].options["options-3"];
+                    let option4 = que_arr[j].options["options-4"];
+
+                    let a = `
+                    <div class="row">
+                        <div class="col-12">
+                            <p> Que ${num}. ${que}</p>
+                        </div>
+                        <div class="col-6 pl-4">
+                            <input id="q${num}o1" type="radio" value="${option1}" name="que${num}">
+                            <label for="q${num}o1">${option1}</label>
+                        </div>
+                        <div class="col-6 pl-4">
+                            <input id="q${num}o2" type="radio" value="${option2}" name="que${num}">
+                            <label for="q${num}o2">${option2}</label>
+                        </div>
+                        <div class="col-6 pl-4">
+                            <input id="q${num}o3" type="radio" value="${option3}" name="que${num}">
+                            <label for="q${num}o3">${option3}</label>
+                        </div>
+                        <div class="col-6 pl-4">
+                            <input id="q${num}o4" type="radio" value="${option4}" name="que${num}">
+                            <label for="q${num}o4">${option4}</label>
+                        </div>
+                        <div class="col-12">
+                            <div class=" ans ans-${num}"></div>
+                        </div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    `;
+
+                    $(".quiz").append(a);
+
+                }
+
+
+
+            });
+        </script>
+
+
+
+
+        <!-- Optional JavaScript -->
+</body>
+
+</html>
+<script>
+</script>

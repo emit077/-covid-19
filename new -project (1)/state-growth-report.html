@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <!-- data table plugins -->
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+    <!--  font -awesome  for  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-body"></div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand " href="index.html">COVID-19 Dashboards</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container">
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link un" href="about.html">About <span
+                                class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link un" href="contact-us.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link un" href="quiz.html">quiz</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="main-body">
+            <section>
+                <div class="container p-4 bg-white">
+                    <h3> Coronavirus Cases in India</h3>
+                    <div class="row text-center">
+                        <div class="col-3 covid-danger p-3">
+                            <h3 class="text-danger">83,103</h3>
+                            <h6 class="text-danger">Confirmed</h6>
+                        </div>
+                        <div class="col-3 covid-primary p-3">
+                            <h3 class="text-primary">51,472</h3>
+                            <h6 class="text-primary">Active</h6>
+                        </div>
+                        <div class="col-3 covid-success p-3">
+                            <h3 class="text-success">27,977</h3>
+                            <h6 class="text-success">Recovered</h6>
+                        </div>
+                        <div class="col-3 covid-light p-3">
+                            <h3 class="text-grey">2,649</h3>
+                            <h6 class="text-grey">Deaths</h6>
+                        </div>
+                    </div>
+                    <div class="text-center p-3">
+                        <img class="image-preview" src="images/india-map.png">
+                    </div>
+
+                    <div class="state-table-wrapper">
+                        <table class="state-table contact-table table-striped">
+                            <style type="text/css">
+                            table {border-collapse: separate;border-spacing: 0 3px; font-family: Kokila; font-size: 18px;}
+                            table td#CELL1 {color: red; border-radius: 5px; border-left: solid 5px red; border-bottom: 1px solid;}
+                            table td#CELL2 {color: orange; border-radius: 5px; border-left: solid 5px orange;}
+                            table td#CELL3 {color: green; border-radius: 5px; border-left: solid 5px green;}
+                            table td {border-radius: 5px; border-bottom: 1px solid;}
+                            table th {border-radius: 5px; border-left: 1px solid; border-right: 1px solid; border-bottom: 5px red;}
+                            </style>
+                            <thead>
+                                <tr>
+                                    <th class="p-2 covid-light">&nbsp <b> राष्ट्र/केन्द्रशासित प्रदेश<b></th>
+                                        <th class="p-2"></th>
+                                        <th class="p-2"> Active</th>
+                                        <th class="p-2"> Recovered</th>
+                                        <th class="p-2"> Deaths</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="state-list">
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+
+
+            <footer>
+                <div class="container">
+
+                    <div class="social-media-list">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <!-- <a href="#" class="fa fa-google"></a> -->
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="text-center pb-2">
+                    <small> COVID-19 Dashboards template | © 2020 All rights reserved </small>
+                </div>
+
+            </footer>
+
+
+            <script>
+            $(document).ready(function() {
+                $(function() {
+                    $('.loader').show();
+                    setTimeout(function() {
+                        $('.loader').hide();
+                    }, 1500);
+                });
+                $('a').click(function() {
+                    $('.loader').show();
+                });
+
+                
+                var state_list= [
+                {
+                    "state": "Maharashtra",
+                    "confirmed": "29,100",
+                    "active": "21,468",
+                    "recovered": "6,564",
+                    "deceased": "1,068"
+                },
+                {
+                    "state": "Tamil Nadu",
+                    "confirmed": "10,108",
+                    "active": "7,438",
+                    "recovered": "2,599",
+                    "deceased": "71"
+                },
+                {
+                    "state": "Gujarat",
+                    "confirmed": "9,932",
+                    "active": "5,291",
+                    "recovered": "4,035",
+                    "deceased": "606"
+                },
+                {
+                    "state": "Delhi",
+                    "confirmed": "8,895",
+                    "active": "5,254",
+                    "recovered": "3,518",
+                    "deceased": "123"
+                },
+                {
+                    "state": "Rajasthan",
+                    "confirmed": "4,747",
+                    "active": "1,893",
+                    "recovered": "2,729",
+                    "deceased": "125"
+                },
+                {
+                    "state": "Madhya Pradesh",
+                    "confirmed": "4,595",
+                    "active": "2,073",
+                    "recovered": "2,283",
+                    "deceased": "239"
+                },
+                {
+                    "state": "Uttar Pradesh",
+                    "confirmed": "4,057",
+                    "active": "1,797",
+                    "recovered": "2,165",
+                    "deceased": "795"
+                },
+                {
+                    "state": "West Bengal",
+                    "confirmed": "2,461",
+                    "active": "1,407",
+                    "recovered": "829",
+                    "deceased": "225"
+                },
+                {
+                    "state": "Andhra Pradesh",
+                    "confirmed": "2,307",
+                    "active": "1,007",
+                    "recovered": "1,252",
+                    "deceased": "48"
+                },
+                {
+                    "state": "Punjab",
+                    "confirmed": "1,932",
+                    "active": "1,595",
+                    "recovered": "305",
+                    "deceased": "32"
+                },
+                {
+                    "state": "Telangana",
+                    "confirmed": "1,454",
+                    "active": "461",
+                    "recovered": "959",
+                    "deceased": "34"
+                },
+                {
+                    "state": "Karnataka",
+                    "confirmed": "1,056",
+                    "active": "539",
+                    "recovered": "480",
+                    "deceased": "36"
+                },
+                {
+                    "state": "Bihar",
+                    "confirmed": "1,033",
+                    "active": "573",
+                    "recovered": "453",
+                    "deceased": "7"
+                },
+                {
+                    "state": "Jammu and Kashmir",
+                    "confirmed": "1,013",
+                    "active": "489",
+                    "recovered": "513",
+                    "deceased": "11"
+                },
+                {
+                    "state": "Haryana",
+                    "confirmed": "854",
+                    "active": "377",
+                    "recovered": "464",
+                    "deceased": "13"
+                },
+                {
+                    "state": "Odisha",
+                    "confirmed": "672",
+                    "active": "503",
+                    "recovered": "166",
+                    "deceased": "3"
+                },
+                {
+                    "state": "Kerala",
+                    "confirmed": "577",
+                    "active": "80",
+                    "recovered": "493",
+                    "deceased": "4"
+                },
+                {
+                    "state": "Jharkhand",
+                    "confirmed": "211",
+                    "active": "111",
+                    "recovered": "97",
+                    "deceased": "3"
+                },
+                {
+                    "state": "Chandigarh",
+                    "confirmed": "191",
+                    "active": "148",
+                    "recovered": "40",
+                    "deceased": "3"
+                },
+                {
+                    "state": "Tripura",
+                    "confirmed": "156",
+                    "active": "127",
+                    "recovered": "29",
+                    "deceased": "0"
+                },
+                {
+                    "state": "Assam",
+                    "confirmed": "90",
+                    "active": "46",
+                    "recovered": "41",
+                    "deceased": "2"
+                },
+                {
+                    "state": "Uttarakhand",
+                    "confirmed": "82",
+                    "active": "30",
+                    "recovered": "51",
+                    "deceased": "1"
+                },
+                {
+                    "state": "Himachal Pradesh",
+                    "confirmed": "75",
+                    "active": "34",
+                    "recovered": "35",
+                    "deceased": "3"
+                },
+                {
+                    "state": "Chhattisgarh",
+                    "confirmed": "60",
+                    "active": "4",
+                    "recovered": "56",
+                    "deceased": "0"
+                },
+                {
+                    "state": "Ladakh",
+                    "confirmed": "43",
+                    "active": "19",
+                    "recovered": "24",
+                    "deceased": "0"
+                },
+                {
+                    "state": "Andaman and Nicobar Islands",
+                    "confirmed": "33",
+                    "active": "0",
+                    "recovered": "33",
+                    "deceased": "0"
+                },
+                {
+                    "state": "Puducherry",
+                    "confirmed": "16",
+                    "active": "7",
+                    "recovered": "9",
+                    "deceased": "0"
+                },
+                {
+                    "state": "Goa",
+                    "confirmed": "15",
+                    "active": "8",
+                    "recovered": "7",
+                    "deceased": "0"
+                },
+                {
+                    "state": "Meghalaya",
+                    "confirmed": "13",
+                    "active": "1",
+                    "recovered": "11",
+                    "deceased": "1"
+                },
+                {
+                    "state": "Manipur",
+                    "confirmed": "3",
+                    "active": "1",
+                    "recovered": "2",
+                    "deceased": "0"
+                },
+                {
+                    "state": "Mizoram",
+                    "confirmed": "1",
+                    "active": "0",
+                    "recovered": "1",
+                    "deceased": "0"
+                },
+                {
+                    "state": "Arunachal Pradesh",
+                    "confirmed": "1",
+                    "active": "0",
+                    "recovered": "1",
+                    "deceased": "0"
+                },
+                {
+                    "state": "Dadra and Nagar Haveli and Daman and Diu",
+                    "confirmed": "1",
+                    "active": "0",
+                    "recovered": "1",
+                    "deceased": "0"
+                },
+                {
+                    "state": "Total",
+                    "confirmed": "85,784",
+                    "active": "52,781",
+                    "recovered": "30,245",
+                    "deceased": "1,042,753"
+                },
+                ]
+
+                console.log(state_list)
+                for(i=0; i<state_list.length; i++){
+                    let obj=state_list[i]
+                    let row=`<tr>
+                    <td><a href="district_report.html?state=${obj.state}&id=${i}">${obj.state}</a></td>
+                    <td>${obj.confirmed}</td>
+                    <td>${obj.active}</td>
+                    <td>${obj.recovered}</td>
+                    <td>${obj.deceased}</td>
+                    </tr>`;
+                    $(".state-list").append(row);
+                }
+                
+
+            });
+
+        function stateDetail(id,state){
+            console.log(state)
+            console.log(obj)
+        }
+
+</script>
+<!-- Optional JavaScript -->
+</body>
+
+</html>

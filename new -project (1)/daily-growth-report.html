@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <!-- data table plugins -->
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+    <!--  font -awesome  for  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-body"></div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand " href="index.html">COVID-19 Dashboards</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="container">
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link un" href="about.html">About <span
+                                        class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link un" href="contact-us.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link un" href="quiz.html">quiz</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-body">
+        <section>
+            <div class="container p-4 bg-white">
+                <div class="container pb-5">
+                    <h3>Total Coronavirus Cases in India</h3>
+                    <img class="graph-image" src="images/total-case.png">
+                </div>
+                <div class="container pb-5">
+                    <h3>Daily New Cases in India</h3>
+                    <img class="graph-image" src="images/daily-new-case.png">
+                </div>
+                <div class="container pb-5">
+                    <h3>Active Cases in India</h3>
+                    <img class="graph-image" src="images/active-case.png">
+                </div>
+                <div class="container pb-5">
+                    <h3>Total Coronavirus Deaths in India</h3>
+                    <img class="graph-image" src="images/corona-death.png">
+                </div>
+                <div class="container pb-5">
+                    <h3>Daily New Deaths in India</h3>
+                    <img class="graph-image" src="images/daily-new-death.png">
+                </div>
+                <div class="container pb-5">
+                    <h3>Newly Infected vs. Newly Recovered in India</h3>
+                    <img class="graph-image" src="images/new-effect-vs-recover.png">
+                </div>
+                <div class="container pb-5">
+                    <h3>Outcome of Cases (Recovery or Death) in India</h3>
+                    <img class="graph-image" src="images/recovery-or-death.png">
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <!-- <div class="row">
+            <div class="col-4 p-0">
+                Suscribe
+            </div>
+            <div class="col-8 p-0">
+                A site that displays up to date COVID-19 stats, powered by fastpages. A site that displays up to date COVID-19 stats, powered by fastpages. A site that displays up to date COVID-19 stats, powered by fastpages.
+            </div>
+        </div> -->
+            <div class="social-media-list">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <!-- <a href="#" class="fa fa-google"></a> -->
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+        <div class="text-center pb-2">
+            <small> COVID-19 Dashboards template | © 2020 All rights reserved </small>
+        </div>
+
+    </footer>
+
+
+    <script>
+        $(document).ready(function() {
+            $(function() {
+                $('.loader').show();
+                setTimeout(function() {
+                    $('.loader').hide();
+                }, 1500);
+            });
+            $('a').click(function() {
+                $('.loader').show();
+            });
+        });
+    </script>
+    <!-- Optional JavaScript -->
+</body>
+
+</html>
